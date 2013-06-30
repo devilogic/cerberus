@@ -1,0 +1,9 @@
+LIBRARY	"chaosvmldr"
+EXPORTS
+
+g_ChaosVmLdrConfigure
+
+g_DISConfigure
+
+DISEntry
+DISEntryInDll

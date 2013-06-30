@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chaosvmp>
+  <!--是否备份原文件-->
+  <backup>TRUE</backup>
+  <!--选择模式:"infect = 0","emulation = 1","emulation in sys = 2","network = 3"-->
+  <mode>0</mode>
+  <!--对话框选项-->
+  <messagebox>
+    <!--标题-->
+    <caption>混乱虚拟机保护</caption>
+    <!--当字节码文件不存在时所提示的内容-->
+    <message0>混乱虚拟机所需要的字节码文件不存在</message0>
+    <!--当仿真机程序文件不存在时所提示的内容-->
+    <message1>混乱虚拟机所需要的字节码文件不存在</message1>
+    <!--对话框风格-->
+    <style>0</style>
+  </messagebox>
+  <!--字节码文件名-->
+  <bcname>bytecodes.cbc</bcname>
+  <!--仿真机名称-->
+  <emulation>chaosvm_emulation.dll</emulation>
+  <!--目标文件的路径-->
+  <target>E:\projects\cerberus\bin\xsign.exe</target>
+  <!--混乱虚拟机保护要保护的地址-->
+  <protect0>
+    <addr size="67">
+      <address>0x00401080</address>
+      <key size="0">r</key>
+    </addr>
+  </protect0>
+
+  <!--力量保护要保护的地址-->
+  <protect1>
+    <addr size="100">
+      <address>0x401000</address>
+      <key size="10">0x401080</key>
+      <instruction>
+        <ins>
+          <address>0x401000</address>
+          <key size="56">0x402888</key>
+        </ins>
+        <ins>
+          <address>0x401088</address>
+          <key size="64">0x403346</key>
+        </ins>
+      </instruction>
+    </addr>
+  </protect1>
+  
+</chaosvmp>

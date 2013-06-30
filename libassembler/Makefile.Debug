@@ -1,0 +1,97 @@
+#
+# 编译工具与选项
+#
+NAME          = libassembler
+ROOT_DIR      = d:\logic
+PROJECT_DIR   = $(ROOT_DIR)\projects
+BIN_DIR       = $(ROOT_DIR)\projects\bin
+INCLUDE_DIR   = $(ROOT_DIR)\include
+LIB_DIR       = $(ROOT_DIR)\lib
+YACC		  = yacc
+YFLAGS        = -d
+CC            = cl
+CXX           = cl
+#/D "_LIB"
+DEFINES       = /D "WIN32" /D "_DEBUG" /D "DEBUG" /D "_CONSOLE" /D "_UNICODE" /D "UNICODE" /D "_MS_VER"
+DBGFLAG		  = /Zi
+CFLAGS        = /Od /Gm /EHsc /RTC1 /MTd /W3 /nologo /c /errorReport:prompt /Fd"vc90.pdb" $(DEFINES) $(DBGFLAG)
+CXXFLAGS      = $(CFLAGS) /TP
+INCPATH       = /I $(INCLUDE_DIR)\sdk /I $(INCLUDE_DIR)\vc /I $(PROJECT_DIR)\codes\libcommon /I $(PROJECT_DIR)\codes\liblogic
+LINK		  = link
+LIB        	  = lib /NOLOGO /LTCG
+LIBPATH       = /LIBPATH:$(LIB_DIR)\sdk /LIBPATH:$(LIB_DIR)\vc
+LFLAGS		  = /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTFILE:$(BIN_DIR)\$(NAME).exe.intermediate.manifest /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /SUBSYSTEM:CONSOLE /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /ERRORREPORT:PROMPT /DELAYLOAD:"OldAcc.dll" DelayImp.lib
+
+RC			  = rc
+RFLAGS		  = /d "_UNICODE" /d "UNICODE"
+COPY          = copy /y
+COPY_FILE     = $(COPY)
+COPY_DIR      = xcopy /s /q /y /i
+DEL_FILE      = del
+DEL_DIR       = rmdir
+MOVE          = move
+MKDIR         = mkdir
+INSTALL_FILE    = $(COPY_FILE)
+INSTALL_PROGRAM = $(COPY_FILE)
+INSTALL_DIR     = $(COPY_DIR)
+
+#
+# 输出目录
+#
+OBJECTS_DIR   = .
+
+#
+# 文件集合
+#
+RC_SOURCES	  = $(NAME).rc
+RC_TARGET	  = $(NAME).res
+OBJECTS       = Assembler.obj AssemblerImmediateMemory.obj AssemblerParse.obj AssemblerRelocation.obj AssemblerSymbolTable.obj Encoder.obj x64Encoder.obj y.tab.obj
+LIBS		  = $(BIN_DIR)\libcommon.lib $(BIN_DIR)\liblogic.lib
+DESTDIR        = $(BIN_DIR)
+TARGET         = $(NAME).lib
+PDBFILE_TARGET = $(BIN_DIR)\symbols\$(NAME).pdb
+DESTDIR_TARGET = $(BIN_DIR)\$(TARGET)
+
+#
+# 编译规则
+#
+all: $(TARGET)
+
+clean: compiler_clean
+	-$(DEL_FILE) $(OBJECTS)
+	-$(DEL_FILE) vc90.pdb
+	-$(DEL_FILE) vc90.idb
+
+distclean: clean
+	-$(DEL_FILE) $(DESTDIR_TARGET)
+	-$(DEL_FILE) $(PDBFILE_TARGET)
+
+compiler_clean:
+
+#
+# 编译
+#
+$(OBJECTS): Assembler.c AssemblerImmediateMemory.c AssemblerParse.c AssemblerRelocation.c AssemblerSymbolTable.c Encoder.c x64Encoder.c y.tab.c
+
+$(TARGET): $(OBJECTS) $(RC_TARGET)
+	$(LIB) /OUT:$(DESTDIR_TARGET) $(OBJECTS)
+
+$(RC_TARGET):
+	$(RC) $(RFLAGS) /fo $(RC_TARGET) $(RC_SOURCES)
+
+.c.obj: %.obj: %.c
+
+%.obj: %.c
+	$(CC) $(CFLAGS) $(INCPATH) $<
+
+y.tab.c:
+	$(YACC) $(YFLAGS) Assembler.y
+
+#
+# 安装
+#
+install:   FORCE
+
+uninstall:   FORCE
+
+FORCE:

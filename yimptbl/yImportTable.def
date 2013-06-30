@@ -1,0 +1,7 @@
+LIBRARY	"yimptbl"
+EXPORTS
+
+g_DISConfigure
+
+DISEntry
+DISEntryInDll

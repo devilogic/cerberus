@@ -1,0 +1,38 @@
+#define MAX_TMP_ASM_TOKEN			0x1000
+
+/*
+ * 返回队列当前队列元素数目
+ */
+DWORD CHARM_FASTCALL WriteAsmTokenToArray(PASM_TOKEN *pAsmTokenArrayPoint, DWORD dwPoint, ASM_TOKEN Token)
+{
+	PASM_TOKEN pAsmTokenArray = *pAsmTokenArrayPoint;
+	if (pAsmTokenArray == NULL)
+	{
+		pAsmTokenArray = __new__(ASM_TOKEN, MAX_TMP_ASM_TOKEN);
+		dwPoint = 0;
+		pAsmTokenArray[dwPoint] = Token;
+		dwPoint++;
+	}
+	else
+	{
+		// 如果模上最大标记为0
+		if ((dwPoint % MAX_TMP_ASM_TOKEN == 0) && (dwPoint != 0))
+		{
+			PASM_TOKEN pTmpToken = __new__(ASM_TOKEN, dwPoint);//临时缓冲区
+			memcpy(pTmpToken, pAsmTokenArray, (dwPoint * sizeof(ASM_TOKEN)));
+			__delete__(pAsmTokenArray);
+			pAsmTokenArray = __new__(ASM_TOKEN, dwPoint + MAX_TMP_ASM_TOKEN);
+			memcpy(pAsmTokenArray, pTmpToken, (dwPoint * sizeof(ASM_TOKEN)));
+			dwPoint++;
+			pAsmTokenArray[dwPoint] = Token;
+		}
+		else
+		{
+			pAsmTokenArray[dwPoint] = Token;
+			dwPoint++;
+		}
+	}
+
+	*pAsmTokenArrayPoint = pAsmTokenArray;
+	return dwPoint;
+}

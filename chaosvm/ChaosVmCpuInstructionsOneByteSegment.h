@@ -1,0 +1,6 @@
+CPU_STATUS __INTERNAL_FUNC__ FuncOne_FuncOne_Prefix_Segment_ES(PCHAOSVM_CPU pCPU);//[26]
+CPU_STATUS __INTERNAL_FUNC__ FuncOne_FuncOne_Prefix_Segment_CS(PCHAOSVM_CPU pCPU);//[2E]
+CPU_STATUS __INTERNAL_FUNC__ FuncOne_FuncOne_Prefix_Segment_SS(PCHAOSVM_CPU pCPU);//[36]
+CPU_STATUS __INTERNAL_FUNC__ FuncOne_FuncOne_Prefix_Segment_DS(PCHAOSVM_CPU pCPU);//[3E]
+CPU_STATUS __INTERNAL_FUNC__ FuncOne_FuncOne_Prefix_Segment_FS(PCHAOSVM_CPU pCPU);//[64]
+CPU_STATUS __INTERNAL_FUNC__ FuncOne_FuncOne_Prefix_Segment_GS(PCHAOSVM_CPU pCPU);//[65]

@@ -1,0 +1,520 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcommon", "libcommon\libcommon.vcproj", "{7E599AE2-05FB-40C1-AC57-FD148117A2BA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "liblogic", "liblogic\liblogic.vcproj", "{3C7A0D60-12A6-47CA-A308-9C800C51E87D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcrypto", "libcrypto\libcrypto.vcproj", "{CFD68AEB-26C2-4EF9-A367-B438572374BF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libudis86", "libudis86\libudis86.vcproj", "{E3704481-5D7C-4D14-BFEB-12485BE47FCF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libsupport", "libsupport\libsupport.vcproj", "{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D} = {3C7A0D60-12A6-47CA-A308-9C800C51E87D}
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF} = {E3704481-5D7C-4D14-BFEB-12485BE47FCF}
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA} = {7E599AE2-05FB-40C1-AC57-FD148117A2BA}
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF} = {CFD68AEB-26C2-4EF9-A367-B438572374BF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libanalyzer", "libanalyzer\libanalyzer.vcproj", "{3CD114E8-2842-4357-9A58-006AB1EB30B5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12} = {B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libdis", "libdis\libdis.vcproj", "{007F169B-9C9A-4E53-BA63-1B40B6C103D5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4C9DDCCB-F551-42B9-B682-F195286C6042} = {4C9DDCCB-F551-42B9-B682-F195286C6042}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libdisath", "libdisath\libdisath.vcproj", "{4C9DDCCB-F551-42B9-B682-F195286C6042}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libchaosvmath", "libchaosvmath\libchaosvmath.vcproj", "{B429A752-3F14-4D13-8577-B685D9363C57}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpowerprotecter", "libpowerprotecter\libpowerprotecter.vcproj", "{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}"
+	ProjectSection(ProjectDependencies) = postProject
+		{58335C6F-8546-460D-93FB-6445C519B652} = {58335C6F-8546-460D-93FB-6445C519B652}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpowerprotecterath", "libpowerprotecterath\libpowerprotecterath.vcproj", "{58335C6F-8546-460D-93FB-6445C519B652}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chaosvm", "chaosvm\chaosvm.vcproj", "{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34} = {ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12} = {B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}
+		{B429A752-3F14-4D13-8577-B685D9363C57} = {B429A752-3F14-4D13-8577-B685D9363C57}
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390} = {D243F991-16EC-47BC-B7E4-097AF7CAD390}
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262} = {AC09BD95-D802-4CF0-9C8E-C5B606FAD262}
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5} = {007F169B-9C9A-4E53-BA63-1B40B6C103D5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libchaosvmp", "libchaosvmp\libchaosvmp.vcproj", "{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libchaosvmbcfile", "libchaosvmbcfile\libchaosvmbcfile.vcproj", "{D243F991-16EC-47BC-B7E4-097AF7CAD390}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chaosvmldr", "chaosvmldr\chaosvmldr.vcproj", "{9ABBE23E-96F4-4913-84B1-D87D07341203}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12} = {B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390} = {D243F991-16EC-47BC-B7E4-097AF7CAD390}
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262} = {AC09BD95-D802-4CF0-9C8E-C5B606FAD262}
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5} = {007F169B-9C9A-4E53-BA63-1B40B6C103D5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "efiler", "efiler\efiler.vcproj", "{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cbcfileview", "cbcfileview\cbcfileview.vcproj", "{ADBD056F-C3F0-464E-B241-AF95A28C844B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pefix", "pefix\pefix.vcproj", "{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yimptbl", "yimptbl\yimptbl.vcproj", "{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12} = {B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5} = {007F169B-9C9A-4E53-BA63-1B40B6C103D5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xanalyzer", "xanalyzer\xanalyzer.vcproj", "{B50543A9-0F74-44D8-887F-65C121EE2E4C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5} = {3CD114E8-2842-4357-9A58-006AB1EB30B5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xfileview", "xfileview\xfileview.vcproj", "{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xsign", "xsign\xsign.vcproj", "{C6ECAAF3-C086-4944-8866-4BB3EE563137}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ximptbl", "ximptbl\ximptbl.vcproj", "{793250D5-F536-4B59-B3D4-4C79ACC306E2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE} = {E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chaosvmp", "chaosvmp\chaosvmp.vcproj", "{585F226B-9574-4A48-9586-1A06C6C795D0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crc32er", "crc32er\crc32er.vcproj", "{B50085E2-D70A-4175-B141-81CCC92769EB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fuckme", "fuckme\fuckme.vcproj", "{6A416E71-661A-46C7-AEFC-5804D5346D3A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fuckyou", "fuckyou\fuckyou.vcproj", "{DE541078-2212-4676-BE4D-635DE282D556}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xmonitor", "xmonitor\xmonitor.vcproj", "{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libdetours", "libdetours\libdetours.vcproj", "{61ACA065-C46A-49EC-8710-69BAEFF15B6C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "imptblfix", "imptblfix\imptblfix.vcproj", "{5F3C26B8-FD28-4138-8933-643FE00832F7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ChaosVmEmulationDebug = ChaosVmEmulationDebug
+		ChaosVmEmulationRelease = ChaosVmEmulationRelease
+		ChaosVmEmulationReleaseWithDbgPrint = ChaosVmEmulationReleaseWithDbgPrint
+		ChaosVmReleaseWithDbgPrint = ChaosVmReleaseWithDbgPrint
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA}.Debug.ActiveCfg = Debug|Win32
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA}.Debug.Build.0 = Debug|Win32
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA}.Release.ActiveCfg = Release|Win32
+		{7E599AE2-05FB-40C1-AC57-FD148117A2BA}.Release.Build.0 = Release|Win32
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D}.Debug.ActiveCfg = Debug|Win32
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D}.Debug.Build.0 = Debug|Win32
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D}.Release.ActiveCfg = Release|Win32
+		{3C7A0D60-12A6-47CA-A308-9C800C51E87D}.Release.Build.0 = Release|Win32
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF}.Debug.ActiveCfg = Debug|Win32
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF}.Debug.Build.0 = Debug|Win32
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF}.Release.ActiveCfg = Release|Win32
+		{CFD68AEB-26C2-4EF9-A367-B438572374BF}.Release.Build.0 = Release|Win32
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF}.Debug.ActiveCfg = Debug|Win32
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF}.Debug.Build.0 = Debug|Win32
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF}.Release.ActiveCfg = Release|Win32
+		{E3704481-5D7C-4D14-BFEB-12485BE47FCF}.Release.Build.0 = Release|Win32
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}.Debug.ActiveCfg = Debug|Win32
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}.Debug.Build.0 = Debug|Win32
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}.Release.ActiveCfg = Release|Win32
+		{B0EF8E1E-2EB5-46EC-89F0-73BB0C3C2C12}.Release.Build.0 = Release|Win32
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5}.Debug.ActiveCfg = Debug|Win32
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5}.Debug.Build.0 = Debug|Win32
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5}.Release.ActiveCfg = Release|Win32
+		{3CD114E8-2842-4357-9A58-006AB1EB30B5}.Release.Build.0 = Release|Win32
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5}.Debug.ActiveCfg = Debug|Win32
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5}.Debug.Build.0 = Debug|Win32
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5}.Release.ActiveCfg = Release|Win32
+		{007F169B-9C9A-4E53-BA63-1B40B6C103D5}.Release.Build.0 = Release|Win32
+		{4C9DDCCB-F551-42B9-B682-F195286C6042}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{4C9DDCCB-F551-42B9-B682-F195286C6042}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{4C9DDCCB-F551-42B9-B682-F195286C6042}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{4C9DDCCB-F551-42B9-B682-F195286C6042}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{4C9DDCCB-F551-42B9-B682-F195286C6042}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{4C9DDCCB-F551-42B9-B682-F195286C6042}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{4C9DDCCB-F551-42B9-B682-F195286C6042}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{4C9DDCCB-F551-42B9-B682-F195286C6042}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{4C9DDCCB-F551-42B9-B682-F195286C6042}.Debug.ActiveCfg = Debug|Win32
+		{4C9DDCCB-F551-42B9-B682-F195286C6042}.Debug.Build.0 = Debug|Win32
+		{4C9DDCCB-F551-42B9-B682-F195286C6042}.Release.ActiveCfg = Release|Win32
+		{4C9DDCCB-F551-42B9-B682-F195286C6042}.Release.Build.0 = Release|Win32
+		{B429A752-3F14-4D13-8577-B685D9363C57}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{B429A752-3F14-4D13-8577-B685D9363C57}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{B429A752-3F14-4D13-8577-B685D9363C57}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{B429A752-3F14-4D13-8577-B685D9363C57}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{B429A752-3F14-4D13-8577-B685D9363C57}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{B429A752-3F14-4D13-8577-B685D9363C57}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{B429A752-3F14-4D13-8577-B685D9363C57}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{B429A752-3F14-4D13-8577-B685D9363C57}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{B429A752-3F14-4D13-8577-B685D9363C57}.Debug.ActiveCfg = Debug|Win32
+		{B429A752-3F14-4D13-8577-B685D9363C57}.Debug.Build.0 = Debug|Win32
+		{B429A752-3F14-4D13-8577-B685D9363C57}.Release.ActiveCfg = Release|Win32
+		{B429A752-3F14-4D13-8577-B685D9363C57}.Release.Build.0 = Release|Win32
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}.Debug.ActiveCfg = Debug|Win32
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}.Debug.Build.0 = Debug|Win32
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}.Release.ActiveCfg = Release|Win32
+		{AC09BD95-D802-4CF0-9C8E-C5B606FAD262}.Release.Build.0 = Release|Win32
+		{58335C6F-8546-460D-93FB-6445C519B652}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{58335C6F-8546-460D-93FB-6445C519B652}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{58335C6F-8546-460D-93FB-6445C519B652}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{58335C6F-8546-460D-93FB-6445C519B652}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{58335C6F-8546-460D-93FB-6445C519B652}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{58335C6F-8546-460D-93FB-6445C519B652}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{58335C6F-8546-460D-93FB-6445C519B652}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{58335C6F-8546-460D-93FB-6445C519B652}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{58335C6F-8546-460D-93FB-6445C519B652}.Debug.ActiveCfg = Debug|Win32
+		{58335C6F-8546-460D-93FB-6445C519B652}.Debug.Build.0 = Debug|Win32
+		{58335C6F-8546-460D-93FB-6445C519B652}.Release.ActiveCfg = Release|Win32
+		{58335C6F-8546-460D-93FB-6445C519B652}.Release.Build.0 = Release|Win32
+		{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}.ChaosVmEmulationDebug.ActiveCfg = ChaosVmEmulationDebug|Win32
+		{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}.ChaosVmEmulationDebug.Build.0 = ChaosVmEmulationDebug|Win32
+		{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}.ChaosVmEmulationRelease.ActiveCfg = ChaosVmEmulationRelease|Win32
+		{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}.ChaosVmEmulationRelease.Build.0 = ChaosVmEmulationRelease|Win32
+		{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = ChaosVmEmulationReleaseWithDbgPrint|Win32
+		{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = ChaosVmEmulationReleaseWithDbgPrint|Win32
+		{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}.ChaosVmReleaseWithDbgPrint.ActiveCfg = ChaosVmReleaseWithDbgPrint|Win32
+		{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}.ChaosVmReleaseWithDbgPrint.Build.0 = ChaosVmReleaseWithDbgPrint|Win32
+		{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}.Debug.ActiveCfg = Debug|Win32
+		{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}.Debug.Build.0 = Debug|Win32
+		{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}.Release.ActiveCfg = Release|Win32
+		{6EDCCD7F-D3D5-4E34-B705-01300B574BD4}.Release.Build.0 = Release|Win32
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}.Debug.ActiveCfg = Debug|Win32
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}.Debug.Build.0 = Debug|Win32
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}.Release.ActiveCfg = Release|Win32
+		{ED0E5B0B-2DE5-4A61-8A27-B7B659F1DF34}.Release.Build.0 = Release|Win32
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390}.Debug.ActiveCfg = Debug|Win32
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390}.Debug.Build.0 = Debug|Win32
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390}.Release.ActiveCfg = Release|Win32
+		{D243F991-16EC-47BC-B7E4-097AF7CAD390}.Release.Build.0 = Release|Win32
+		{9ABBE23E-96F4-4913-84B1-D87D07341203}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{9ABBE23E-96F4-4913-84B1-D87D07341203}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{9ABBE23E-96F4-4913-84B1-D87D07341203}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{9ABBE23E-96F4-4913-84B1-D87D07341203}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{9ABBE23E-96F4-4913-84B1-D87D07341203}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{9ABBE23E-96F4-4913-84B1-D87D07341203}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{9ABBE23E-96F4-4913-84B1-D87D07341203}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{9ABBE23E-96F4-4913-84B1-D87D07341203}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{9ABBE23E-96F4-4913-84B1-D87D07341203}.Debug.ActiveCfg = Debug|Win32
+		{9ABBE23E-96F4-4913-84B1-D87D07341203}.Debug.Build.0 = Debug|Win32
+		{9ABBE23E-96F4-4913-84B1-D87D07341203}.Release.ActiveCfg = Release|Win32
+		{9ABBE23E-96F4-4913-84B1-D87D07341203}.Release.Build.0 = Release|Win32
+		{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}.Debug.ActiveCfg = Debug|Win32
+		{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}.Debug.Build.0 = Debug|Win32
+		{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}.Release.ActiveCfg = Release|Win32
+		{53F98EB1-DE95-4D98-9D0C-8D8D08B0B14C}.Release.Build.0 = Release|Win32
+		{ADBD056F-C3F0-464E-B241-AF95A28C844B}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{ADBD056F-C3F0-464E-B241-AF95A28C844B}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{ADBD056F-C3F0-464E-B241-AF95A28C844B}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{ADBD056F-C3F0-464E-B241-AF95A28C844B}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{ADBD056F-C3F0-464E-B241-AF95A28C844B}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{ADBD056F-C3F0-464E-B241-AF95A28C844B}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{ADBD056F-C3F0-464E-B241-AF95A28C844B}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{ADBD056F-C3F0-464E-B241-AF95A28C844B}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{ADBD056F-C3F0-464E-B241-AF95A28C844B}.Debug.ActiveCfg = Debug|Win32
+		{ADBD056F-C3F0-464E-B241-AF95A28C844B}.Debug.Build.0 = Debug|Win32
+		{ADBD056F-C3F0-464E-B241-AF95A28C844B}.Release.ActiveCfg = Release|Win32
+		{ADBD056F-C3F0-464E-B241-AF95A28C844B}.Release.Build.0 = Release|Win32
+		{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}.Debug.ActiveCfg = Debug|Win32
+		{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}.Debug.Build.0 = Debug|Win32
+		{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}.Release.ActiveCfg = Release|Win32
+		{C154BEB3-E2D7-4CD2-ABCF-A78A39024DEB}.Release.Build.0 = Release|Win32
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}.Debug.ActiveCfg = Debug|Win32
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}.Debug.Build.0 = Debug|Win32
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}.Release.ActiveCfg = Release|Win32
+		{E1AA53BF-1906-4AA3-AD49-438E6DFE4ABE}.Release.Build.0 = Release|Win32
+		{B50543A9-0F74-44D8-887F-65C121EE2E4C}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{B50543A9-0F74-44D8-887F-65C121EE2E4C}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{B50543A9-0F74-44D8-887F-65C121EE2E4C}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{B50543A9-0F74-44D8-887F-65C121EE2E4C}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{B50543A9-0F74-44D8-887F-65C121EE2E4C}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{B50543A9-0F74-44D8-887F-65C121EE2E4C}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{B50543A9-0F74-44D8-887F-65C121EE2E4C}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{B50543A9-0F74-44D8-887F-65C121EE2E4C}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{B50543A9-0F74-44D8-887F-65C121EE2E4C}.Debug.ActiveCfg = Debug|Win32
+		{B50543A9-0F74-44D8-887F-65C121EE2E4C}.Debug.Build.0 = Debug|Win32
+		{B50543A9-0F74-44D8-887F-65C121EE2E4C}.Release.ActiveCfg = Release|Win32
+		{B50543A9-0F74-44D8-887F-65C121EE2E4C}.Release.Build.0 = Release|Win32
+		{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}.Debug.ActiveCfg = Debug|Win32
+		{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}.Debug.Build.0 = Debug|Win32
+		{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}.Release.ActiveCfg = Release|Win32
+		{4455DFB8-A02A-4D0F-A331-7B1FA7D03D7C}.Release.Build.0 = Release|Win32
+		{C6ECAAF3-C086-4944-8866-4BB3EE563137}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{C6ECAAF3-C086-4944-8866-4BB3EE563137}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{C6ECAAF3-C086-4944-8866-4BB3EE563137}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{C6ECAAF3-C086-4944-8866-4BB3EE563137}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{C6ECAAF3-C086-4944-8866-4BB3EE563137}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{C6ECAAF3-C086-4944-8866-4BB3EE563137}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{C6ECAAF3-C086-4944-8866-4BB3EE563137}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{C6ECAAF3-C086-4944-8866-4BB3EE563137}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{C6ECAAF3-C086-4944-8866-4BB3EE563137}.Debug.ActiveCfg = Debug|Win32
+		{C6ECAAF3-C086-4944-8866-4BB3EE563137}.Debug.Build.0 = Debug|Win32
+		{C6ECAAF3-C086-4944-8866-4BB3EE563137}.Release.ActiveCfg = Release|Win32
+		{C6ECAAF3-C086-4944-8866-4BB3EE563137}.Release.Build.0 = Release|Win32
+		{793250D5-F536-4B59-B3D4-4C79ACC306E2}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{793250D5-F536-4B59-B3D4-4C79ACC306E2}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{793250D5-F536-4B59-B3D4-4C79ACC306E2}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{793250D5-F536-4B59-B3D4-4C79ACC306E2}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{793250D5-F536-4B59-B3D4-4C79ACC306E2}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{793250D5-F536-4B59-B3D4-4C79ACC306E2}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{793250D5-F536-4B59-B3D4-4C79ACC306E2}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{793250D5-F536-4B59-B3D4-4C79ACC306E2}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{793250D5-F536-4B59-B3D4-4C79ACC306E2}.Debug.ActiveCfg = Debug|Win32
+		{793250D5-F536-4B59-B3D4-4C79ACC306E2}.Debug.Build.0 = Debug|Win32
+		{793250D5-F536-4B59-B3D4-4C79ACC306E2}.Release.ActiveCfg = Release|Win32
+		{793250D5-F536-4B59-B3D4-4C79ACC306E2}.Release.Build.0 = Release|Win32
+		{585F226B-9574-4A48-9586-1A06C6C795D0}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{585F226B-9574-4A48-9586-1A06C6C795D0}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{585F226B-9574-4A48-9586-1A06C6C795D0}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{585F226B-9574-4A48-9586-1A06C6C795D0}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{585F226B-9574-4A48-9586-1A06C6C795D0}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{585F226B-9574-4A48-9586-1A06C6C795D0}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{585F226B-9574-4A48-9586-1A06C6C795D0}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{585F226B-9574-4A48-9586-1A06C6C795D0}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{585F226B-9574-4A48-9586-1A06C6C795D0}.Debug.ActiveCfg = Debug|Win32
+		{585F226B-9574-4A48-9586-1A06C6C795D0}.Debug.Build.0 = Debug|Win32
+		{585F226B-9574-4A48-9586-1A06C6C795D0}.Release.ActiveCfg = Release|Win32
+		{585F226B-9574-4A48-9586-1A06C6C795D0}.Release.Build.0 = Release|Win32
+		{B50085E2-D70A-4175-B141-81CCC92769EB}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{B50085E2-D70A-4175-B141-81CCC92769EB}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{B50085E2-D70A-4175-B141-81CCC92769EB}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{B50085E2-D70A-4175-B141-81CCC92769EB}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{B50085E2-D70A-4175-B141-81CCC92769EB}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{B50085E2-D70A-4175-B141-81CCC92769EB}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{B50085E2-D70A-4175-B141-81CCC92769EB}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{B50085E2-D70A-4175-B141-81CCC92769EB}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{B50085E2-D70A-4175-B141-81CCC92769EB}.Debug.ActiveCfg = Debug|Win32
+		{B50085E2-D70A-4175-B141-81CCC92769EB}.Debug.Build.0 = Debug|Win32
+		{B50085E2-D70A-4175-B141-81CCC92769EB}.Release.ActiveCfg = Release|Win32
+		{B50085E2-D70A-4175-B141-81CCC92769EB}.Release.Build.0 = Release|Win32
+		{6A416E71-661A-46C7-AEFC-5804D5346D3A}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{6A416E71-661A-46C7-AEFC-5804D5346D3A}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{6A416E71-661A-46C7-AEFC-5804D5346D3A}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{6A416E71-661A-46C7-AEFC-5804D5346D3A}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{6A416E71-661A-46C7-AEFC-5804D5346D3A}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{6A416E71-661A-46C7-AEFC-5804D5346D3A}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{6A416E71-661A-46C7-AEFC-5804D5346D3A}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{6A416E71-661A-46C7-AEFC-5804D5346D3A}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{6A416E71-661A-46C7-AEFC-5804D5346D3A}.Debug.ActiveCfg = Debug|Win32
+		{6A416E71-661A-46C7-AEFC-5804D5346D3A}.Debug.Build.0 = Debug|Win32
+		{6A416E71-661A-46C7-AEFC-5804D5346D3A}.Release.ActiveCfg = Release|Win32
+		{6A416E71-661A-46C7-AEFC-5804D5346D3A}.Release.Build.0 = Release|Win32
+		{DE541078-2212-4676-BE4D-635DE282D556}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{DE541078-2212-4676-BE4D-635DE282D556}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{DE541078-2212-4676-BE4D-635DE282D556}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{DE541078-2212-4676-BE4D-635DE282D556}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{DE541078-2212-4676-BE4D-635DE282D556}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{DE541078-2212-4676-BE4D-635DE282D556}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{DE541078-2212-4676-BE4D-635DE282D556}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{DE541078-2212-4676-BE4D-635DE282D556}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{DE541078-2212-4676-BE4D-635DE282D556}.Debug.ActiveCfg = Debug|Win32
+		{DE541078-2212-4676-BE4D-635DE282D556}.Debug.Build.0 = Debug|Win32
+		{DE541078-2212-4676-BE4D-635DE282D556}.Release.ActiveCfg = Release|Win32
+		{DE541078-2212-4676-BE4D-635DE282D556}.Release.Build.0 = Release|Win32
+		{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}.Debug.ActiveCfg = Debug|Win32
+		{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}.Debug.Build.0 = Debug|Win32
+		{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}.Release.ActiveCfg = Release|Win32
+		{3F3BDE82-DBE2-41BC-AD36-ADDC2AAC7AAE}.Release.Build.0 = Release|Win32
+		{61ACA065-C46A-49EC-8710-69BAEFF15B6C}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{61ACA065-C46A-49EC-8710-69BAEFF15B6C}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{61ACA065-C46A-49EC-8710-69BAEFF15B6C}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{61ACA065-C46A-49EC-8710-69BAEFF15B6C}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{61ACA065-C46A-49EC-8710-69BAEFF15B6C}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{61ACA065-C46A-49EC-8710-69BAEFF15B6C}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{61ACA065-C46A-49EC-8710-69BAEFF15B6C}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{61ACA065-C46A-49EC-8710-69BAEFF15B6C}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{61ACA065-C46A-49EC-8710-69BAEFF15B6C}.Debug.ActiveCfg = Debug|Win32
+		{61ACA065-C46A-49EC-8710-69BAEFF15B6C}.Debug.Build.0 = Debug|Win32
+		{61ACA065-C46A-49EC-8710-69BAEFF15B6C}.Release.ActiveCfg = Release|Win32
+		{61ACA065-C46A-49EC-8710-69BAEFF15B6C}.Release.Build.0 = Release|Win32
+		{5F3C26B8-FD28-4138-8933-643FE00832F7}.ChaosVmEmulationDebug.ActiveCfg = Debug|Win32
+		{5F3C26B8-FD28-4138-8933-643FE00832F7}.ChaosVmEmulationDebug.Build.0 = Debug|Win32
+		{5F3C26B8-FD28-4138-8933-643FE00832F7}.ChaosVmEmulationRelease.ActiveCfg = Release|Win32
+		{5F3C26B8-FD28-4138-8933-643FE00832F7}.ChaosVmEmulationRelease.Build.0 = Release|Win32
+		{5F3C26B8-FD28-4138-8933-643FE00832F7}.ChaosVmEmulationReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{5F3C26B8-FD28-4138-8933-643FE00832F7}.ChaosVmEmulationReleaseWithDbgPrint.Build.0 = Release|Win32
+		{5F3C26B8-FD28-4138-8933-643FE00832F7}.ChaosVmReleaseWithDbgPrint.ActiveCfg = Release|Win32
+		{5F3C26B8-FD28-4138-8933-643FE00832F7}.ChaosVmReleaseWithDbgPrint.Build.0 = Release|Win32
+		{5F3C26B8-FD28-4138-8933-643FE00832F7}.Debug.ActiveCfg = Debug|Win32
+		{5F3C26B8-FD28-4138-8933-643FE00832F7}.Debug.Build.0 = Debug|Win32
+		{5F3C26B8-FD28-4138-8933-643FE00832F7}.Release.ActiveCfg = Release|Win32
+		{5F3C26B8-FD28-4138-8933-643FE00832F7}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

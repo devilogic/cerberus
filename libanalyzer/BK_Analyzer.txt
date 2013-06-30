@@ -1,0 +1,108 @@
+/*
+ * 删除函数链中的指定的代码块或者数据块
+ * bBlock == TRUE,删除所有数据块
+ * bBlock == FALSE,删除所有代码块
+ */
+PPROCEDURE CHARM_INTERNAL_FUNC RemoveProcedureListNodeByType(PPROCEDURE pProcedureList, BOOL bBlock = FALSE)
+{
+	PPROCEDURE pCurr = pProcedureList, pPrev = NULL;
+	while (pCurr != NULL)
+	{
+		// 触发条件
+		if (pCurr->bBlock == bBlock)
+		{
+			// 是否是链头
+			if (pPrev == NULL)
+			{
+				pProcedureList = pCurr->pNext;
+				__delete__(pCurr);
+				pCurr = pProcedureList;
+				//pPrev = NULL;
+			}
+			else
+			{
+				pPrev->pNext = pCurr->pNext;
+				__delete__(pCurr);
+				pCurr = pPrev->pNext;
+			}
+			continue;
+		}
+		pPrev = pCurr;//更新上一个节点指针
+		pCurr = pCurr->pNext;
+	}
+
+	return pProcedureList;
+}
+
+PPROCEDURE CHARM_INTERNAL_FUNC InsertProcListToProcList(PPROCEDURE pInsertTo, PPROCEDURE pInsertFrom, BOOL bClean = FALSE)
+{
+	PPROCEDURE pInsertToEnd = pInsertTo, pCurrInsertTo = NULL;
+	PPROCEDURE pInsertFromHeader = pInsertFrom, pCurrInsertFrom = pInsertFromHeader, pPrevInsertFrom = NULL;
+	while (pInsertToEnd->pNext != NULL) pInsertToEnd = pInsertToEnd->pNext;
+
+	while (pCurrInsertFrom != NULL)
+	{
+		pCurrInsertTo = pInsertTo;
+		while (pCurrInsertTo != NULL)
+		{
+			// 匹配到
+			if (pCurrInsertTo->dwMemoryStartAddress == pCurrInsertFrom->dwMemoryStartAddress)
+			{
+				if (bClean == FALSE)
+					goto _continue;
+				else
+				{
+					// 清除不同的地址
+					if (pCurrInsertTo != pCurrInsertFrom)
+					{
+						// 如果是头
+						if (pPrevInsertFrom == NULL)
+						{
+							pInsertFromHeader = pCurrInsertFrom->pNext;//pPrevInsertFrom做临时变量
+							__delete__(pCurrInsertFrom);
+							pCurrInsertFrom = pInsertFromHeader;
+							//pPrevInsertFrom = NULL;
+							goto _continue;
+						}
+						else
+						{
+							pPrevInsertFrom->pNext = pCurrInsertFrom->pNext;
+							__delete__(pCurrInsertFrom);
+							pCurrInsertFrom = pPrevInsertFrom->pNext;
+							goto _continue;
+						}
+					}
+				}/* end else */
+			}
+			// 匹配下一个
+			pCurrInsertTo = pCurrInsertTo->pNext;
+		}/* end while */
+
+		// 链入链表末尾
+		if (pPrevInsertFrom == NULL)
+		{
+			pInsertFromHeader = pCurrInsertFrom->pNext;
+			pCurrInsertFrom->pNext = NULL;
+			pInsertToEnd->pNext = pCurrInsertFrom;
+			pInsertToEnd = pInsertToEnd->pNext;//pInsertToEnd = pCurrInsertForm
+			pCurrInsertFrom = pInsertFromHeader;//设置当前节点
+			//pPrevInsertFrom == NULL;
+		}
+		else
+		{
+			pPrevInsertFrom->pNext = pCurrInsertFrom->pNext;//脱链
+			pCurrInsertFrom->pNext = NULL;
+			pInsertToEnd->pNext = pCurrInsertFrom;
+			pInsertToEnd = pInsertToEnd->pNext;//pInsertToEnd = pCurrInsertForm
+			pCurrInsertFrom = pPrevInsertFrom->pNext;//设置当前节点
+		}
+		continue;//进入下一轮
+
+		// 下一轮
+		pPrevInsertFrom = pCurrInsertFrom;
+		pCurrInsertFrom = pCurrInsertFrom->pNext;
+_continue:;
+	}
+
+	return pInsertTo;
+}

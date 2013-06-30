@@ -1,0 +1,1 @@
+CPU_STATUS __INTERNAL_FUNC__ FuncTwo_OpcodeExtDispatch_0FBA(PCHAOSVM_CPU pCPU);//[BA]

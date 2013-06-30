@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChaosVmp>
+  <!--目标文件-->
+  <TargetFileName>D:\projects\public\fuckme.exe</TargetFileName>
+  
+  <!--是否备份文件-->
+  <BackupOrigFile>1</BackupOrigFile>
+  
+  <!--混乱虚拟机运行模式,0:感染型,1:仿真型-->
+  <ChaosVmRunMode>1</ChaosVmRunMode>
+  
+  <!--是否使用字节码文件-->
+  <UseByteFile>0</UseByteFile>
+
+  <!--混乱虚拟机字节码的文件名-->
+  <ByteCodeFileName>Lice.cbc</ByteCodeFileName>
+
+  <!--以调试方式加载混乱虚拟机仿真器-->
+  <DebugChaosVm enable="1">
+    <!--以断点的形式断掉-->
+    <BreakPoint>1</BreakPoint>
+  </DebugChaosVm>
+  
+  <!--混乱虚拟机仿真器的名称-->
+  <ChaosVmNameInEmulation></ChaosVmNameInEmulation>
+  
+  <!--提示框选项-->
+  <MessageBoxTitle>E-SHELL</MessageBoxTitle>
+  <MessageBoxOnByteCodeFileNotExist>Byte codefile not exist</MessageBoxOnByteCodeFileNotExist>
+  <MessageBoxOnEmulationFileNotExist>Emulation file not exist</MessageBoxOnEmulationFileNotExist>
+  <MessageStyle>0</MessageStyle>
+  
+  <!--虚拟机保护要保护的函数-->
+  <x>
+    <Procedure size="48">
+      <Address>0x00401020</Address>
+      <KeyProcedure size="768">0x22334455</KeyProcedure>
+    </Procedure>
+  </x>
+
+  <!--使用力量保护-->
+  <y>
+    <Procedure size="96">
+      <Address>0x00401080</Address>
+      <KeyProcedure size="768">0x22334455</KeyProcedure>
+      
+      <!--要特殊保护的指令 1-->
+      <Instruction>
+        <Address>0xFFFBBBBB</Address>
+        <WatchAddress size="66">0x22334455</WatchAddress>
+      </Instruction>
+
+      <!--要特殊保护的指令 2-->
+      <Instruction>
+        <Address>0xFFFBBBBB</Address>
+        <WatchAddress size="66">0x22334455</WatchAddress>
+      </Instruction>
+      
+    </Procedure>
+  </y>
+  
+</ChaosVmp>
